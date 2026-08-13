@@ -2,11 +2,25 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "C++ Compile",
+            "label": "Compile and Run",
             "type": "shell",
-            "command": "g++",
+            "command": "cmd.exe",
             "args": [
-                "-std=c++17",
+                "/c",
+                "g++ \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" && \"${fileDirname}\\${fileBasenameNoExtension}.exe\" < \"${fileDirname}\\input.txt\" > \"${fileDirname}\\output.txt\""
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe build active file",
+            "command": "C:\\MinGW\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
@@ -17,10 +31,8 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
+            "group": "build",
+            "detail": "compiler: C:\\MinGW\\bin\\g++.exe"
         }
     ]
 }
