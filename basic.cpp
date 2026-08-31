@@ -121,31 +121,90 @@
 
 // }
 // check for the prime
-#include<iostream>
-#include<bits/stdc++.h>
-using namespace std;
-void check_prime(int n){
-int count = 0;
- for(int i=1 ; i*i <= n; i++){
-    if(n % i == 0){
-        count++;
+// #include<iostream>
+// #include<bits/stdc++.h>
+// using namespace std;
+// void check_prime(int n){
+// int count = 0;
+//  for(int i=1 ; i*i <= n; i++){
+//     if(n % i == 0){
+//         count++;
     
-    if((n / i)  != i ){
-        count++;
+//     if((n / i)  != i ){
+//         count++;
+//     }
+
+//   }
+// }
+//   if(count == 2){
+//     cout<<"number is prime";
+//   }
+//   else{
+//     cout<<"not prime";
+// }
+// }
+// int main(){
+//     int n;
+//     cin >> n;
+//     check_prime(n);
+//     return 0;
+// }
+
+//highest common factor
+// #include<iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+// void gcd(int n, int n1){
+//   int ans = 1;
+//   for(int i=1; i<=min(n,n1) ; i++){
+//     if(n % i == 0 && n1 % i == 0){
+//      ans =  i ;
+
+//     }
+    
+//   }
+//   cout << ans;
+// }
+// int main(){
+//     int n , n1;
+//     cin >> n;
+//     cin >> n1;
+//     gcd(n , n1);
+//     return 0;
+// }
+
+// greatest common divisor
+
+#include <iostream>
+using namespace std;
+
+void hcd(int n, int n1) {
+
+    while (n > 0 && n1 > 0) {
+
+        if (n > n1) {
+            n = n % n1;
+        }
+        else {
+            n1 = n1 % n;
+        }
     }
 
-  }
+    if (n == 0) {
+        cout << n1;
+    }
+    else {
+        cout << n;
+    }
 }
-  if(count == 2){
-    cout<<"number is prime";
-  }
-  else{
-    cout<<"not prime";
-}
-}
-int main(){
-    int n;
-    cin >> n;
-    check_prime(n);
+
+int main() {
+
+    int n, n1;
+
+    cin >> n >> n1;
+
+    hcd(n, n1);
+
     return 0;
 }
