@@ -97,37 +97,149 @@
 
 //     return 0;
 // }
-#include<bits/stdc++.h>
-using namespace std ;
-int remdup(vector<int>&arr , int n){
-    int i = 0;
-    for(int j=0 ; j< n ; j++){
-        if(arr[i] != arr[j]){
-            arr[i+1]=arr[j];
-            i++;
+// #include<bits/stdc++.h>
+// using namespace std ;
+// int remdup(vector<int>&arr , int n){
+//     int i = 0;
+//     for(int j=0 ; j< n ; j++){
+//         if(arr[i] != arr[j]){
+//             arr[i+1]=arr[j];
+//             i++;
 
-        }   
-     }
-     return i+1;
-}
-int main(){
-    int n;
+//         }   
+//      }
+//      return i+1;
+// }
+// int main(){
+//     int n;
 
-    cout << "Enter size: ";
-    cin >> n;
+//     cout << "Enter size: ";
+//     cin >> n;
 
-    vector<int> arr(n);
+//     vector<int> arr(n);
 
-    cout << "Enter elements: ";
-    for(int i = 0; i < n; i++){
-        cin >> arr[i];
-    }
-   int k = remdup(arr, n);
+//     cout << "Enter elements: ";
+//     for(int i = 0; i < n; i++){
+//         cin >> arr[i];
+//     }
+//    int k = remdup(arr, n);
 
-   cout << "Unique elements: ";
-   for(int i = 0; i < k; i++){
-    cout << arr[i] << " ";
-}
+//    cout << "Unique elements: ";
+//    for(int i = 0; i < k; i++){
+//     cout << arr[i] << " ";
+// }
 
-    return 0;
-}
+//     return 0;
+// }
+//rotate abn array by one shifte to the left side
+// #include<iostream>
+// #include<bits/stdc++.h>
+// using namespace std;
+// vector<int> rotate_array(vector<int> &arr , int n){
+//     int temp = arr[0];
+//     for(int i=1; i<n ; i++){
+//         arr[i-1] = arr[i];
+//     }
+//     arr[n-1] = temp;
+//     return arr;
+// }
+// int main(){
+//     int n;
+//     cin >> n;
+//     vector<int> arr(n);
+//     for(int i =0; i<n ; i++){
+//         cin >> arr[i] ;
+//     }
+//         rotate_array(arr,n);
+//         for(int i=0;i<n;i++){
+//             cout << arr[i] << endl;
+//         }
+    
+// return 0;
+// }
+// //rotate from the some values
+// #include<bits/stdc++.h>
+// using namespace std;
+// vector<int> rotate_array(vector<int> &arr , int n, int d){
+//     d = d % n;
+//     int temp[d];
+//     for(int i=d; i<d ; i++ ){
+//         temp[i] = arr[i];
+//     }
+//     for(int i = d; i< n ; i++){
+//         arr[i-d] = arr[i];
+//     }
+//     for(int i = n-d ; i<n ; i++){
+//         arr[i] = temp[i - (n-d)];
+//     }
+// }
+// int main(){
+//     int n,d;
+//     cin >> n;
+//     cout << "enter how left side rotate";
+//     cin >> d;
+    
+//     vector<int> arr(n);
+//     for(int i =0; i<n ; i++){
+//         cin >> arr[i] ;
+//     }
+//         rotate_array(arr,n , d);
+//         for(int i=0;i<n;i++){
+//             cout << arr[i] << endl;
+//         }
+    
+// return 0;
+// }
+// #include<bits/stdc++.h>
+// using namespace std ; 
+// vector<int> leftrotate(vector<int> &arr , int n , int d){
+//     d = d % n;
+//     int temp[d];
+//     for(int i=0 ; i<n ; i++){
+//         temp[i] = arr[i];
+//     }
+//     for(int i=d; i<n ; i++){
+//         arr[i-d] = arr[i];
+//     }
+//     for(int i=n-d;i<n ; i++ ){
+//         arr[i] = temp[i-(n-d);]
+//     }
+    
+// }
+// #include<bits/stdc++.h>
+// using namespace std;
+// vector<int> rightrotate(vector<int> &arr , int n , int d){
+//     d = d % n;
+//     int temp[d];
+//     //store the last d element in temp
+//     for(int i=0 ; i<d ; i++){
+//         temp[i] = arr[n- d + i];
+//     }
+//     //return the rotate elemnet at first 
+//     for(int i=n-1 ; i>=d ; i--){
+//         arr[i] = arr[i-d];
+//     }
+//     //store the remaining element 
+//     for(int i= 0; i< d ; i++){
+//         arr[i] = temp[i];
+//     }
+//     return arr;
+// }
+
+// int main(){
+//     int n,d;
+//     cin >> n;
+//     cout << "enter how left side rotate";
+//     cin >> d;
+    
+//     vector<int> arr(n);
+//     for(int i =0; i<n ; i++){
+//         cin >> arr[i] ;
+//     }
+//         rightrotate(arr,n , d);
+//         for(int i=0;i<n;i++){
+//             cout << arr[i] << endl;
+//         }
+    
+// return 0;
+// }
